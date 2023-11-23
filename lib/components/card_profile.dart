@@ -11,19 +11,19 @@ class CardProfile extends StatelessWidget {
     return Container(
       height: 250,
       padding: const EdgeInsets.all(10),
-      margin: const EdgeInsets.fromLTRB(20, 80, 20, 10),
+      margin: const EdgeInsets.fromLTRB(20, 20, 20, 10),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10.0),
         boxShadow: [
           const BoxShadow(color: Colors.grey, blurRadius: 10, spreadRadius: 2)
         ],
-        color: Colors.blueAccent,
+        color: Colors.white,
       ),
       child: Column(
         children: [
           Container(
             padding: const EdgeInsets.all(8),
-            height: 180,
+            height: 160,
             decoration: BoxDecoration(
                 color: Colors.white, borderRadius: BorderRadius.circular(10)),
             child: Row(
@@ -104,7 +104,7 @@ class CardProfile extends StatelessWidget {
                         style: TextStyle(color: Colors.white),
                       ),
                       style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.amber,
+                          backgroundColor: Colors.white30,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5.0))),
                     )),
@@ -117,7 +117,7 @@ class CardProfile extends StatelessWidget {
                       onPressed: () {},
                       child: const Text(
                         'cancel',
-                        style: TextStyle(color: Colors.blueAccent),
+                        style: TextStyle(color: Colors.black26),
                       ),
                       style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(

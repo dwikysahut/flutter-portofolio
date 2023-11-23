@@ -17,8 +17,9 @@ class HomePage extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            CardProfile(),
+            const CardProfile(),
             renderDiscoverable(),
+            const CardFeatured()
           ],
         ),
       ),
@@ -56,6 +57,55 @@ class HomePage extends StatelessWidget {
   }
 }
 
+class CardFeatured extends StatelessWidget {
+  const CardFeatured({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.all(20),
+      height: 150,
+      padding: const EdgeInsets.all(24),
+      width: double.infinity,
+      decoration: BoxDecoration(
+          color: const Color.fromARGB(255, 118, 160, 155),
+          borderRadius: BorderRadius.circular(15)),
+      child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+              decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 70, 95, 92),
+                  borderRadius: BorderRadius.circular(5)),
+              child: const Text(
+                "Featured Article",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 11,
+                    fontWeight: FontWeight.w500),
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            const Text(
+              "Natural mood regulation lower absent in people with depress",
+              overflow: TextOverflow.ellipsis,
+              maxLines: 2,
+              style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w700,
+                  fontSize: 16),
+            )
+          ]),
+    );
+  }
+}
+
 class TitleListView extends StatelessWidget {
   const TitleListView({Key? key, required this.subTitle, required this.title})
       : super(key: key);
@@ -65,7 +115,7 @@ class TitleListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(10),
+      padding: const EdgeInsets.all(10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
